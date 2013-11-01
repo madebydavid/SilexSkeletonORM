@@ -1,6 +1,6 @@
 {
-	"name": "SilexSkeletonORM",
-	"description": "Skeleton Silex App with ORM and cli tool for generating model and schema",
+	"name": "silex-skeleton-orm",
+	"description": "Skeleton Silex app with ORM and cli tool for generating model and schema",
 	"authors": [
 		{
 			"name": "madebydavid",
