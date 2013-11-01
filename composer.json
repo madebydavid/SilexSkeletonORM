@@ -1,8 +1,17 @@
 {
+	"name": "SilexSkeletonORM",
+	"description": "Skeleton Silex App with ORM and cli tool for generating model and schema",
+	"authors": [
+		{
+			"name": "madebydavid",
+			"email": "sutherland.dave@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
 	"require": {
 		"silex/silex": "1.*",
 		"twitter/bootstrap": "3.0.0",
-		"symfony/class-loader":	 "2.3.",
+		"symfony/class-loader": "2.3.",
 		"silex/web-profiler": "~1.0",
 		"symfony/twig-bridge": "~2.2",
 		"twig/twig": ">=1.8,<2.0-dev",
