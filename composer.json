@@ -1,0 +1,23 @@
+{
+	"require": {
+		"silex/silex": "1.*",
+		"twitter/bootstrap": "3.0.0",
+		"symfony/class-loader":	 "2.3.",
+		"silex/web-profiler": "~1.0",
+		"symfony/twig-bridge": "~2.2",
+		"twig/twig": ">=1.8,<2.0-dev",
+		"monolog/monolog": ">=1.0.0",
+		"symfony/console": "~2.2",
+		"symfony/validator": "~2.3",
+		"doctrine/dbal": "2.3.4",
+		"symfony/doctrine-bridge": "2.*",
+		"dflydev/doctrine-orm-service-provider": "1.0.*@dev",
+		"symfony/yaml": "2.4.*@dev"
+    },
+    "autoload":	{
+		"psr-0": {
+			"Controller": "src/",
+			"Model": "src/"
+		}
+	}
+}
