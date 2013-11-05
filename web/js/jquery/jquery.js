@@ -1,1 +1,1 @@
-../../../vendor/components/jquery/jquery.js
+../../../vendor/jquery/jquery/jquery-1.7.2.js

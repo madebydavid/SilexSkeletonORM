@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-$cli = new Application('Badger', '0.1');
+$cli = new Application('SilexSkeletonORM', '0.1');
 $cli ->getDefinition()->addOption(
 		new InputOption('--env', '-e', InputOption::VALUE_REQUIRED, 'The Environment name.', 'dev')
 );

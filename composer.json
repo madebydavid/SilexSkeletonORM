@@ -8,9 +8,23 @@
 		}
 	],
 	"minimum-stability": "dev",
+	"repositories": [
+   		{
+			"type": "package",
+			"package": {
+				"name": "jquery/jquery",
+				"version": "1.7.2",
+				"dist": {
+					"url": "http://code.jquery.com/jquery-1.7.2.js",
+					"type": "file"
+				}
+			}
+		}
+	],
 	"require": {
+		"jquery/jquery": "1.7.2",
 		"silex/silex": "1.*",
-		"twitter/bootstrap": "3.0.0",
+		"twitter/bootstrap": "2.3.*",
 		"symfony/class-loader": "2.3.",
 		"silex/web-profiler": "~1.0",
 		"symfony/twig-bridge": "~2.2",
@@ -21,7 +35,12 @@
 		"doctrine/dbal": "2.3.4",
 		"symfony/doctrine-bridge": "2.*",
 		"dflydev/doctrine-orm-service-provider": "1.0.*@dev",
-		"symfony/yaml": "2.4.*@dev"
+		"symfony/yaml": "2.4.*@dev",
+                "symfony/form": "~2.3",
+                "symfony/validator":  "~2.3",
+                "symfony/config": "~2.3",
+                "symfony/translation": "~2.3",
+                "symfony/locale": "~2.3"
     },
     "autoload":	{
 		"psr-0": {
