@@ -34,7 +34,7 @@
         "symfony/validator": "~2.3",
         "doctrine/dbal": "2.3.4",
         "symfony/doctrine-bridge": "2.*",
-        "dflydev/doctrine-orm-service-provider": "1.0.*@dev",
+        "dflydev/doctrine-orm-service-provider": "1.0.0",
         "dominikzogg/doctrine-orm-manager-registry-provider": "~1.1",
         "symfony/yaml": "2.4.*@dev",
         "symfony/form": "~2.3",
