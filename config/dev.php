@@ -13,8 +13,7 @@ $app->register(new MonologServiceProvider(), array(
 ));
 
 $app['config'] = array(
-	'js_options' => array(
-		'foo' => 'bar' 
+	'js.options' => array(
 	),
 	'db.options' => array(
 		'driver'	=> 'pdo_mysql',

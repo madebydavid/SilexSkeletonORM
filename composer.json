@@ -1,52 +1,52 @@
 {
-	"name": "madebydavid/silex-skeleton-orm",
-	"description": "Skeleton Silex app with ORM and cli tool for generating model and schema",
-	"authors": [
-		{
-			"name": "madebydavid",
-			"email": "sutherland.dave@gmail.com"
-		}
-	],
-	"minimum-stability": "dev",
-	"repositories": [
-   		{
-			"type": "package",
-			"package": {
-				"name": "jquery/jquery",
-				"version": "1.7.2",
-				"dist": {
-					"url": "http://code.jquery.com/jquery-1.7.2.js",
-					"type": "file"
-				}
-			}
-		}
-	],
-	"require": {
-		"jquery/jquery": "1.7.2",
-		"silex/silex": "1.*",
-		"twitter/bootstrap": "2.3.*",
-		"symfony/class-loader": "2.3.",
-		"silex/web-profiler": "~1.0",
-		"symfony/twig-bridge": "~2.2",
-		"twig/twig": ">=1.8,<2.0-dev",
-		"monolog/monolog": ">=1.0.0",
-		"symfony/console": "~2.2",
-		"symfony/validator": "~2.3",
-		"doctrine/dbal": "2.3.4",
-		"symfony/doctrine-bridge": "2.*",
-		"dflydev/doctrine-orm-service-provider": "1.0.*@dev",
+    "name": "madebydavid/silex-skeleton-orm",
+    "description": "Skeleton Silex app with ORM and cli tool for generating model and schema",
+    "authors": [
+        {
+            "name": "madebydavid",
+            "email": "sutherland.dave@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+           {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery",
+                "version": "1.7.2",
+                "dist": {
+                    "url": "http://code.jquery.com/jquery-1.7.2.js",
+                    "type": "file"
+                }
+            }
+        }
+    ],
+    "require": {
+        "jquery/jquery": "1.7.2",
+        "silex/silex": "1.*",
+        "twitter/bootstrap": "2.3.*",
+        "symfony/class-loader": "2.3.",
+        "silex/web-profiler": "~1.0",
+        "symfony/twig-bridge": "~2.2",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "monolog/monolog": ">=1.0.0",
+        "symfony/console": "~2.2",
+        "symfony/validator": "~2.3",
+        "doctrine/dbal": "2.3.4",
+        "symfony/doctrine-bridge": "2.*",
+        "dflydev/doctrine-orm-service-provider": "1.0.*@dev",
         "dominikzogg/doctrine-orm-manager-registry-provider": "~1.1",
-		"symfony/yaml": "2.4.*@dev",
+        "symfony/yaml": "2.4.*@dev",
         "symfony/form": "~2.3",
         "symfony/validator":  "~2.3",
         "symfony/config": "~2.3",
         "symfony/translation": "~2.3",
         "symfony/locale": "~2.3"
     },
-    "autoload":	{
-		"psr-0": {
-			"Controller": "src/",
-			"Model": "src/"
-		}
-	}
+    "autoload":    {
+        "psr-0": {
+            "Controller": "src/",
+            "Model": "src/"
+        }
+    }
 }
