@@ -1,10 +1,10 @@
-# Silex Skeleton ORM
+# Silex Skeleton ORM [![Latest Stable Version](https://poser.pugx.org/madebydavid/silex-skeleton-orm/v/stable.svg)](https://packagist.org/packages/madebydavid/silex-skeleton-orm) 
 
-## A simple Silex skeleton project with Twig, Doctrine, ORM, Bootstrap, jQuery and other common components. 
+## A simple Silex skeleton project with Twig, Doctrine, ORM, Bootstrap, jQuery and other common components.
 
 To view the full list of dependancies, have a look at the [composer.json](composer.json) file.
 
-Based on [Fabien Potencier's Silex Skeleton](https://github.com/silexphp/Silex-Skeleton), but with a different structure.
+Based on [Fabien Potencier's Silex Skeleton](https://github.com/silexphp/Silex-Skeleton), but with more up to date dependencies and a different structure.
 
 ### To install with composer
 
@@ -32,8 +32,12 @@ $app['config'] = array(
     )
 );
 ```
+#### 4. Create the database which you have just configured:
+```bash
+$ mysqladmin create mydatabase
+```
 
-#### 4. Create your model
+#### 5. Create your model
 You can create your model with [Doctrine YAML documents](http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html) in the [config/doctrine](config/doctrine) directory, make a new file called Model.EntityName.dcm.yml for each entity:
 
 ```
@@ -55,11 +59,6 @@ Model\Person:
             columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ```
 
-#### 5. Create the database:
-```bash
-$ mysqladmin create mydatabase
-```
-
 #### 6. Generate the Entity classes from the YAML:
 ```bash
 $ ./console orm:generate-entities src/
@@ -69,3 +68,5 @@ $ ./console orm:generate-entities src/
 ```bash
 $ ./console orm:schema-tool:create
 ```
+
+
