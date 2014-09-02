@@ -32,6 +32,7 @@ $app['config'] = array(
     )
 );
 ```
+
 #### 4. Create your model
 You can create your model with [Doctrine YAML documents](http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html) in the [config/doctrine](config/doctrine) directory, make a new file called Model.EntityName.dcm.yml for each entity:
 
@@ -54,14 +55,14 @@ Model\Person:
             columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ```
 
-#### 5. Generate the Entity classes from the YAML:
-```bash
-$ ./console orm:generate-entities src/
-```
-
-#### 6. Create the database:
+#### 5. Create the database:
 ```bash
 $ mysqladmin create mydatabase
+```
+
+#### 6. Generate the Entity classes from the YAML:
+```bash
+$ ./console orm:generate-entities src/
 ```
 
 #### 7. Create the schema:
