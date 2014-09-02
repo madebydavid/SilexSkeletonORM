@@ -11,6 +11,7 @@ $app['form.extensions'] = $app->factory($app->extend('form.extensions', function
     return $extensions;
 }));
 
+$app->register(new Silex\Provider\LocaleServiceProvider());
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
         'translator.messages' => array(),
 ));
