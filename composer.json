@@ -46,5 +46,13 @@
             "Controller": "src/",
             "Model": "src/"
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "ln -s ../../vendor/twitter/bootstrap/docs/assets/css/ web/bootstrap/css",
+            "ln -s ../../vendor/twitter/bootstrap/docs/assets/img/ web/bootstrap/img",
+            "ln -s ../../vendor/twitter/bootstrap/docs/assets/js/ web/bootstrap/js",
+            "ln -s ../../../vendor/jquery/jquery/jquery-1.11.1.js web/js/jquery/jquery.js"
+        ]
     }
 }
