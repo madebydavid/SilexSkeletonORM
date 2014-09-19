@@ -49,6 +49,7 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "mkdir -p web/bootstrap",
             "ln -s ../../vendor/twitter/bootstrap/docs/assets/css/ web/bootstrap/css",
             "ln -s ../../vendor/twitter/bootstrap/docs/assets/img/ web/bootstrap/img",
             "ln -s ../../vendor/twitter/bootstrap/docs/assets/js/ web/bootstrap/js",
