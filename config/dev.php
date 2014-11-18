@@ -8,17 +8,24 @@ require __DIR__.'/prod.php';
 // enable the debug mode
 $app['debug'] = true;
 
-$app->register(new MonologServiceProvider(), array(
-    'monolog.logfile' => __DIR__.'/../logs/silex_dev.log',
-));
-
 $app['config'] = array(
-	'js.options' => array(
-	),
-	'db.options' => array(
-		'driver'	=> 'pdo_mysql',
-		'dbname'	=> '',
-		'user'		=> '',
-		'password'	=> ''
-	)
+
+    'js.options' => array(
+    ),
+    
+    'db.options' => array(
+        'driver'                => 'pdo_mysql',
+        'dbname'                => '',
+        'user'                  => '',
+        'password'              => ''
+    ),
+    
+    'error.log.filename'        => __DIR__.'/../logs/app-dev.log',
+    
+    'admin.options' => array(
+        'username' => '',
+        'password' => ''
+    ),
+    
+    
 );
