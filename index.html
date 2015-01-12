@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Silex Skeleton ORM by madebydavid</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Silex Skeleton ORM</h1>
+        <h2>A simple Silex skeleton project with Twig, Doctrine, ORM, Bootstrap, jQuery and other common components.</h2>
+        <a href="https://github.com/madebydavid/SilexSkeletonORM" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="silex-skeleton-orm" class="anchor" href="#silex-skeleton-orm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Silex Skeleton ORM</h1>
+
+<h2>
+<a id="a-simple-silex-skeleton-project-with-twig-doctrine-orm-bootstrap-jquery-and-other-common-components" class="anchor" href="#a-simple-silex-skeleton-project-with-twig-doctrine-orm-bootstrap-jquery-and-other-common-components" aria-hidden="true"><span class="octicon octicon-link"></span></a>A simple Silex skeleton project with Twig, Doctrine, ORM, Bootstrap, jQuery and other common components.</h2>
+
+<p>To view the full list of dependancies, have a look at the <a href="https://github.com/madebydavid/SilexSkeletonORM/blob/master/composer.json">composer.json</a> file.</p>
+
+<p>Based on <a href="https://github.com/silexphp/Silex-Skeleton">Fabien Potencier's Silex Skeleton</a>, but with more up to date dependencies and a different structure.</p>
+
+<h3>
+<a id="to-install-with-composer" class="anchor" href="#to-install-with-composer" aria-hidden="true"><span class="octicon octicon-link"></span></a>To install with composer</h3>
+
+<h4>
+<a id="1-install-composer-if-you-dont-have-it-already" class="anchor" href="#1-install-composer-if-you-dont-have-it-already" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install composer if you don't have it already:</h4>
+
+<div class="highlight highlight-bash"><pre>$ curl -sS https://getcomposer.org/installer <span class="pl-k">|</span> php</pre></div>
+
+<h4>
+<a id="2-grab-this-project-as-your-base" class="anchor" href="#2-grab-this-project-as-your-base" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Grab this project as your base</h4>
+
+<div class="highlight highlight-bash"><pre>$ php composer.phar create-project --stability=<span class="pl-s1"><span class="pl-pds">"</span>dev<span class="pl-pds">"</span></span> madebydavid/silex-skeleton-orm silex-project
+$ <span class="pl-s3">cd</span> silex-project</pre></div>
+
+<h4>
+<a id="3-configure-the-database-in-the-dev-config-file" class="anchor" href="#3-configure-the-database-in-the-dev-config-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Configure the database in the <a href="https://github.com/madebydavid/SilexSkeletonORM/blob/master/config/dev.php">dev config file</a>:</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$app</span>[<span class="pl-s1"><span class="pl-pds">'</span>config<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> <span class="pl-s3">array</span>(</span>
+<span class="pl-s2">    <span class="pl-s1"><span class="pl-pds">'</span>js.options<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s3">array</span>(</span>
+<span class="pl-s2">    ),</span>
+<span class="pl-s2">    <span class="pl-s1"><span class="pl-pds">'</span>db.options<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s3">array</span>(</span>
+<span class="pl-s2">        <span class="pl-s1"><span class="pl-pds">'</span>driver<span class="pl-pds">'</span></span>    <span class="pl-k">=&gt;</span> <span class="pl-s1"><span class="pl-pds">'</span>pdo_mysql<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s2">        <span class="pl-s1"><span class="pl-pds">'</span>dbname<span class="pl-pds">'</span></span>    <span class="pl-k">=&gt;</span> <span class="pl-s1"><span class="pl-pds">'</span>mydatabase<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s2">        <span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>      <span class="pl-k">=&gt;</span> <span class="pl-s1"><span class="pl-pds">'</span>root<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s2">        <span class="pl-s1"><span class="pl-pds">'</span>password<span class="pl-pds">'</span></span>  <span class="pl-k">=&gt;</span> <span class="pl-s1"><span class="pl-pds">'</span><span class="pl-pds">'</span></span></span>
+<span class="pl-s2">    )</span>
+<span class="pl-s2">);</span></pre></div>
+
+<h4>
+<a id="4-create-the-database-which-you-have-just-configured" class="anchor" href="#4-create-the-database-which-you-have-just-configured" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Create the database which you have just configured:</h4>
+
+<div class="highlight highlight-bash"><pre>$ mysqladmin create mydatabase</pre></div>
+
+<h4>
+<a id="5-create-your-model" class="anchor" href="#5-create-your-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Create your model</h4>
+
+<p>You can create your model with <a href="http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html">Doctrine YAML documents</a> in the <a href="https://github.com/madebydavid/SilexSkeletonORM/tree/master/config/doctrine">config/doctrine</a> directory, make a new file called Model.EntityName.dcm.yml for each entity:</p>
+
+<pre><code>#config/doctrine/Model.Person.dcm.yml
+Model\Person:
+    type: entity
+    table: person
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        created:
+            type: datetime
+            columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+</code></pre>
+
+<h4>
+<a id="6-generate-the-entity-classes-from-the-yaml" class="anchor" href="#6-generate-the-entity-classes-from-the-yaml" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Generate the Entity classes from the YAML:</h4>
+
+<div class="highlight highlight-bash"><pre>$ ./console orm:generate-entities src/</pre></div>
+
+<h4>
+<a id="7-create-the-schema" class="anchor" href="#7-create-the-schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Create the schema:</h4>
+
+<div class="highlight highlight-bash"><pre>$ ./console orm:schema-tool:create</pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/madebydavid/SilexSkeletonORM/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/madebydavid/SilexSkeletonORM/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/madebydavid/SilexSkeletonORM"></a> is maintained by <a href="https://github.com/madebydavid">madebydavid</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
