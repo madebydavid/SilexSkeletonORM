@@ -22,7 +22,7 @@ namespace SilexSkeletonORM\Tests {
         }
        
         public static function setUpBeforeClass() {
-            /* init's the silex app and create the schema for the quiz test db */
+            /* init's the silex app and create the schema */
             global $app;
 
             Debug::enable();
