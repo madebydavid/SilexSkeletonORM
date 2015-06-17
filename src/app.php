@@ -23,19 +23,18 @@ $app->register(new Silex\Provider\TranslationServiceProvider(), array(
 /* templating */
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/view',
-    'twig.form.templates' => array('form_div_layout.html.twig', 'common/form_div_layout.html.twig'),
+    'twig.form.templates' => array('bootstrap_3_layout.html.twig')
 ));
-
 
 $app->register(new Dflydev\Provider\DoctrineOrm\DoctrineOrmServiceProvider, array(
     'orm.proxies_dir' => sprintf('%s/doctrine/proxy', realpath(sprintf('%s/../cache', __DIR__))),
-    'orm.auto_generate_proxies' => true,
+    'orm.auto_generate_proxies' => $app['debug'],
     'orm.em.options' => array(
         'mappings' => array(
             array(
                 'type'      => 'yml',
                 'namespace' => 'Model',
-                'path'      => realpath(__DIR__.'/../config/doctrine'),
+                'path'      => realpath(__DIR__.'/../config/doctrine/schema'),
             ),
         ),
     ),
@@ -49,33 +48,10 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 /* sessions */
 $app->register(new Silex\Provider\SessionServiceProvider());
 
-/*
- * Security stuff - to use this, add the following to composer.json deps:
- *  
- *     "symfony/security": "2.6.*",
- * 
-$encoder = new \Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder();
-$app['security.firewalls'] = array(
-    'admin' => array(
-        'pattern' => '^/admin/.*$',
-        'http' => true,
-        'users' => array(
-            $app['config']['admin.options']['username'] => array(
-                'ROLE_ADMIN',
-                $encoder->encodePassword(
-                    $app['config']['admin.options']['password'], null
-                )
-            )
-        )
-    ),
-    'everything-else' => array(
-        'pattern' => '^/((?!admin/?$).)*$',
-        'anonymous' => true
-    )
-);
-
-$app->register(new Silex\Provider\SecurityServiceProvider(array()));
-*/
+/* caching */
+$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir' => __DIR__.'/../cache/',
+));
 
 /* logging */
 $app->register(new Silex\Provider\MonologServiceProvider(), array(

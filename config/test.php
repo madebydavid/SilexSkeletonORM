@@ -12,11 +12,11 @@ $app['config'] = array(
     
     'db.options' => array(
         'driver'                => 'pdo_mysql',
-        'dbname'                => 'skeleton-dev',
+        'dbname'                => 'skeleton-test',
         'user'                  => 'root',
         'password'              => ''
     ),
     
-    'error.log.filename'        => __DIR__.'/../logs/app-dev.log',
+    'error.log.filename'        => __DIR__.'/../logs/app-test.log',
 
 );

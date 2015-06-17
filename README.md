@@ -15,18 +15,16 @@ $ curl -sS https://getcomposer.org/installer | php
 
 #### 2. Grab this project as your base
 ```bash
-$ php composer.phar create-project --stability="dev" madebydavid/silex-skeleton-orm silex-project
+$ php composer.phar create-project madebydavid/silex-skeleton-orm silex-project
 $ cd silex-project
 ```
 
 #### 3. Configure the database in the [dev config file](config/dev.php):
 ```php
 $app['config'] = array(
-    'js.options' => array(
-    ),
     'db.options' => array(
         'driver'    => 'pdo_mysql',
-        'dbname'    => 'mydatabase',
+        'dbname'    => 'skeleton-dev',
         'user'      => 'root',
         'password'  => ''
     )
@@ -34,14 +32,14 @@ $app['config'] = array(
 ```
 #### 4. Create the database which you have just configured:
 ```bash
-$ mysqladmin create mydatabase
+$ mysqladmin -uroot create skeleton-dev
 ```
 
 #### 5. Create your model
-You can create your model with [Doctrine YAML documents](http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html) in the [config/doctrine](config/doctrine) directory, make a new file called Model.EntityName.dcm.yml for each entity:
+You can create your model with [Doctrine YAML documents](http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html) in the [config/doctrine/schema](config/doctrine/schema) directory, make a new file called Model.EntityName.dcm.yml for each entity:
 
 ```
-#config/doctrine/Model.Person.dcm.yml
+#config/doctrine/schema/Model.Person.dcm.yml
 Model\Person:
     type: entity
     table: person
