@@ -36,7 +36,7 @@ $ mysqladmin -uroot create skeleton-dev
 ```
 
 #### 5. Create your model
-You can create your model with [Doctrine YAML documents](http://docs.doctrine-project.org/en/2.0.x/reference/yaml-mapping.html) in the [config/doctrine/schema](config/doctrine/schema) directory, make a new file called Model.EntityName.dcm.yml for each entity:
+You can create your model with [Doctrine YAML documents](http://doctrine2.readthedocs.org/en/stable/reference/yaml-mapping.html) in the [config/doctrine/schema](config/doctrine/schema) directory, make a new file called Model.EntityName.dcm.yml for each entity:
 
 ```
 #config/doctrine/schema/Model.Person.dcm.yml
